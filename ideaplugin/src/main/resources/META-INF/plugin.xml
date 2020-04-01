@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>ru.ideaplugin.skiplines.skip</id>
+    <name>Skip Lines</name>
+    <vendor>Example</vendor>
+
+    <description>Proccess file: skip lines after '#skip N' directive</description>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="SkipLinesAction.ToolsMenu" class="ru.ideaplugin.skiplines.SkipLinesAction" text="Skip Lines in File"
+                description="Skip Lines in File after #skip N directive">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
