@@ -1,3 +1,4 @@
+import org.jetbrains.intellij.tasks.PatchPluginXmlTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -16,9 +17,8 @@ dependencies {
     runtimeOnly("org.slf4j:slf4j-simple:1.7.10")
 }
 
-// See https://github.com/JetBrains/gradle-intellij-plugin/
-intellij {
-    version = "2019.2.1"
+tasks.withType<PatchPluginXmlTask> {
+    sinceBuild("172")
 }
 
 tasks.withType<KotlinCompile> {
